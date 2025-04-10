@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador Inteligente de Nómina</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="header">
+    <a href="https://www.teams.com.mx" target="_blank">
+      <img src="{{ url_for('static', filename='logo-blanco.png') }}" alt="TEAMS Logo" class="logo" />
+    </a>
+  </div>
+
+  <div class="container">
+    <h1>Simulador Inteligente de Nómina</h1>
+
+    <!-- VIDEO DE BIENVENIDA -->
+    <div class="video-container">
+      <iframe width="100%" height="315" 
+              src="https://www.youtube.com/embed/REEMPLAZAR_ID_DEL_VIDEO" 
+              title="Video Coach Virtual" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+    </div>
+
+    <!-- ESCENARIO -->
+    <div class="escenario">
+      <h2>Escenario:</h2>
+      <p>
+        Durante el cierre de quincena, detectas que se ha realizado un <strong>pago duplicado</strong> a 15 colaboradores. 
+        RH no ha sido notificado aún y los depósitos ya aparecen reflejados. 
+        Tu jefe te escribe: <em>"¿Sabes algo de esto?"</em>
+      </p>
+      <p><strong>¿Cómo responderías a tu jefe y qué acción tomarías en este momento?</strong></p>
+    </div>
+
+    <!-- FORMULARIO -->
+    <form method="POST">
+      <textarea name="respuesta" placeholder="Escribe aquí tu respuesta..." required></textarea>
+      <button type="submit">Enviar respuesta</button>
+    </form>
+
+    <!-- FEEDBACK DE LA IA -->
+    {% if feedback %}
+    <div class="feedback">
+      <h2>Retroalimentación de tu coach IA:</h2>
+      <p>{{ feedback }}</p>
+    </div>
+
+    <!-- GRÁFICAS DE AVANCE -->
+    <div class="progress-container">
+      <div class="progress-item">
+        <p>Proactividad</p>
+        <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+      </div>
+      <div class="progress-item">
+        <p>Comunicación</p>
+        <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  
+  <!-- Agente D-ID Leo (consultor virtual) -->
+<script
+type="module"
+src="https://agent.d-id.com/v1/index.js"
+data-name="did-agent"
+data-mode="fabio"
+data-client-key="Z29vZ2xlLW9hdXRoMnwxMDM4NDYxNzYzNTI0NDE3NDc2NDY6MFR2bThhSXJ0QlhEZENCdmdBTkNN"
+data-agent-id="agt_8nBIc-s-"
+data-monitor="true">
+</script>
+
+
+  <footer>
+    <p>&copy; {{ year }} TEAMS. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

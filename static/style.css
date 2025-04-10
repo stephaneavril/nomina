@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b1f38; /* azul marino */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #0b1f38;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  color: #333;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+  color: #004c97;
+}
+
+.video-container {
+  margin-bottom: 2rem;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+button {
+  background-color: #004c97;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #003b75;
+}
+
+.feedback {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e0f2f1;
+  border-left: 5px solid #26a69a;
+  border-radius: 5px;
+}
+
+/* GRÁFICAS DE AVANCE */
+.progress-container {
+  margin-top: 2rem;
+}
+
+.progress-item {
+  margin-bottom: 1rem;
+}
+
+.bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: #26a69a;
+  width: 0;
+  transition: width 1s ease;
+}
+
+footer {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+/* Ajuste del botón flotante del agente D-ID si se necesita */
+#did-agent-launcher {
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 1000;
+}
