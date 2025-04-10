@@ -7,23 +7,27 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
+  <!-- HEADER CON LOGO -->
   <div class="header">
     <a href="https://www.teams.com.mx" target="_blank">
       <img src="{{ url_for('static', filename='logo-blanco.png') }}" alt="TEAMS Logo" class="logo" />
     </a>
   </div>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <div class="container">
     <h1>Simulador Inteligente de Nómina</h1>
 
     <!-- VIDEO DE BIENVENIDA -->
     <div class="video-container">
       <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/REEMPLAZAR_ID_DEL_VIDEO" 
-              title="Video Coach Virtual" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen></iframe>
+              src="https://www.youtube.com/embed/BT7ATWio0K4?si=740v5DDNjaxJdz1o"
+              title="Simulador Inteligente de Nómina"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+      </iframe>
     </div>
 
     <!-- ESCENARIO -->
@@ -62,20 +66,20 @@
       </div>
     </div>
     {% endif %}
-  </div>
-  
+  </div> <!-- Cierre del container -->
+
   <!-- Agente D-ID Leo (consultor virtual) -->
-<script
-type="module"
-src="https://agent.d-id.com/v1/index.js"
-data-name="did-agent"
-data-mode="fabio"
-data-client-key="Z29vZ2xlLW9hdXRoMnwxMDM4NDYxNzYzNTI0NDE3NDc2NDY6MFR2bThhSXJ0QlhEZENCdmdBTkNN"
-data-agent-id="agt_8nBIc-s-"
-data-monitor="true">
-</script>
+  <script
+    type="module"
+    src="https://agent.d-id.com/v1/index.js"
+    data-name="did-agent"
+    data-mode="fabio"
+    data-client-key="Z29vZ2xlLW9hdXRoMnwxMDM4NDYxNzYzNTI0NDE3NDc2NDY6MFR2bThhSXJ0QlhEZENCdmdBTkNN"
+    data-agent-id="agt_8nBIc-s-"
+    data-monitor="true">
+  </script>
 
-
+  <!-- FOOTER -->
   <footer>
     <p>&copy; {{ year }} TEAMS. Todos los derechos reservados.</p>
   </footer>
